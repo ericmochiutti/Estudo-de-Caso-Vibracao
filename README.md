@@ -67,7 +67,7 @@ Envolvidos no projeto: Eric - Programador
 Interessados: Gestor do grupo de IA, pesquisadores de IA do SENAI, indústria (cliente).
 
 Temos como requisitos funcionais: O desenvolvimento do pipeline completo de um modelo de Aprendizado de Máquina para classificação de defeitos em máquinas elétricas. <br>
-Temos como requisitos técnicos: O desenvolvimento deve ser feito em python. Levando em consideração o que foi descrito no disclaimer. Adicionou-se a questão do nível de precisão requerido para o projeto e a entrega por uma WebApp.
+Temos como requisitos técnicos: O desenvolvimento deve ser feito em python. Levando em consideração o que foi descrito na ressalva, adicionou-se a questão do nível de precisão requerido para o projeto e a entrega por uma WebApp.
 
 Critério de Sucesso: O objetivo final é a redução do custo do cliente realizando a manutenção preventiva de suas máquinas.
 
