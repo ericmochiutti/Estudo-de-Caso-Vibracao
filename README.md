@@ -24,7 +24,7 @@ Os arquivos do projeto foram divididos nas seguintes pastas e arquivos:
     
 #### Diretório --> modelo<br>
 
-<li>Contém o modelo treinado usado pela WebApp em formato .keras. <br>
+<li>Contém o modelo treinado em formato .keras usado pela WebApp. <br>
 
 #### Diretório --> notebook<br>
 
