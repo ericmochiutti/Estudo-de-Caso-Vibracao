@@ -7,7 +7,7 @@ Desenvolva o Pipeline completo de um projeto de Aprendizado de Máquina, desde a
 
 A aplicação de modelo Machine learning na manutenção preditiva previne falhas em equipamentos industriais ao analisar dados, evitando paradas não planejadas. Foram disponibilizados dados de 5 sensores presentes de uma máquina industrial. O objetivo é classificar com base nos dados fornecidos dos sensores os estados de funcionamentos das máquinas em Classes A, B, C, D e E, gerando um modelo de ML que identifique padrões nos dados dos sensores para realizar as classificações.
 
-### Disclaimer
+### Ressalva
 
 O estudo de caso não indica como as previsões devem ser apresentadas ao usuário final. Isso é uma etapa importante da definição de um projeto, dependendo de como as previsões serão entregues, é preciso etapas de desenvolvimento adicionais. Portanto, optou-se em fazer a entrega do modelo em uma WebApp. Outro ponto de atenção é o nível de precisão requerido para o projeto (não foi especificado). Vamos considerar um modelo aceitável sendo com 90% ou mais de precisão. Um dos requisitos foi que o modelo fosse desenvolvido em python e usando qualquer biblioteca/framework que fosse necessário (todas estão descritas em cada arquivo do projeto juntamente com as versões utilizadas de cada framework/biblioteca).<br>
 
