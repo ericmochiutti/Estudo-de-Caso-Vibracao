@@ -145,7 +145,7 @@ DECISÃO: Aplicação da normalização MinMax.<br>
 #### Questões Observadas:
 <li>O sensor 4 possui apenas valores de 50.0, o que levanta o questionamento, o uso dos dados desse sensor é necessário para essa aplicação? Optei por usar, pois é possivel que em momentos futuros esse sensor seja utilizado para identificação de outras classes de problemas não descritos nesse dataset fornecido. Entretanto, caso fique confirmado que realmente é um sensor que retorna apenas esse valor, é possivel dispensa-lo da análise ou até mesmo retira-lo das máquinas cortando custos ao cliente.
     
-<li>A interpolação linear usada não poderia ser utilzida para calcular dois valores nulos sequenciais, como não ocorreu em nenhum dos sensores de existir duas falhas seguidas, optou-se por continuar com a interpolação linear. Entretanto, essa questão pode representar um obstáculo em situações futuras, e pode-se considerar a exclusão dos dados que apresentarem muitas falhas sequenciais ou a mudança do método de interpolação.
+<li>A interpolação linear usada não poderia ser utilizada para calcular dois valores nulos sequenciais, como não ocorreu em nenhum dos sensores de existir duas falhas seguidas, optou-se por continuar com a interpolação linear. Entretanto, essa questão pode representar um obstáculo em situações futuras, e pode-se considerar a exclusão dos dados que apresentarem muitas falhas sequenciais ou a mudança do método de interpolação.
 
 <li>É necessário modificar o tipo de normalização caso seja notado que existam outliers com ordem de grandeza muito maior em relação a média dos dados.
     
