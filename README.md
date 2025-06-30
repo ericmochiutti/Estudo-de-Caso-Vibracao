@@ -1,11 +1,8 @@
-# Estudo de caso SENAI
+# Estudo de caso
 
 ## Apresentação do problema e contextualização
 
-Você como pesquisador da área de Inteligência Artificial, foi designado para analisar os dados coletados das máquinas e equipamentos. Você deve desenvolver um modelo de Aprendizado de Máquina para identificar padrões do equipamento em análise.
-Desenvolva o Pipeline completo de um projeto de Aprendizado de Máquina, desde a Análise e preparação dos dados adquiridos até a disponibilização do algoritmo no GitHub. O candidato é livre para usar a criatividade sobre qual caminho seguir e como utilizar os dados para a resolução do problema, porém espera-se que seja utilizada linguagem Python para os desenvolvimentos.
-
-A aplicação de modelo Machine learning na manutenção preditiva previne falhas em equipamentos industriais ao analisar dados, evitando paradas não planejadas. Foram disponibilizados dados de 5 sensores presentes de uma máquina industrial. O objetivo é classificar com base nos dados fornecidos dos sensores os estados de funcionamentos das máquinas em Classes A, B, C, D e E, gerando um modelo de ML que identifique padrões nos dados dos sensores para realizar as classificações.
+Desenvolva o Pipeline completo de um projeto de Aprendizado de Máquina, desde a Análise e preparação dos dados adquiridos até a disponibilização do algoritmo no GitHub. A aplicação de modelo Machine learning na manutenção preditiva previne falhas em equipamentos industriais ao analisar dados, evitando paradas não planejadas. Foram disponibilizados dados de 5 sensores presentes de uma máquina industrial. O objetivo é classificar com base nos dados fornecidos dos sensores os estados de funcionamentos das máquinas em Classes A, B, C, D e E, gerando um modelo de ML que identifique padrões nos dados dos sensores para realizar as classificações.
 
 ### Ressalva
 
@@ -31,22 +28,82 @@ Os arquivos do projeto foram divididos nas seguintes pastas e arquivos:
 <li>Contém o arquivo jupyter processamento_dados.ipynb em que é realizada a ANÁLISE EXPLORATÓRIA e o PROCESSAMENTO DOS DADOS dos sensores.<br>
 <li>Contém o arquivo jupyter treinamento_modelo.ipynb em que é realizada a SELEÇÃO DO MODELO de machine learning (rede neural), o TREINAMENTO da rede neural e a AVALIAÇÃO DO MODELO.<br>
 
-#### Diretório --> static<br>
+#### Diretório --> app<br>
+<li>Contém a aplicação web (`app.py`) que serve o modelo, juntamente com seus componentes.</li>
+<li><b>app/static/</b>: Contém os arquivos de estilo (style.css) para a WebApp.</li>
+<li><b>app/templates/</b>: Contém o arquivo HTML (index.html) para a WebApp.</li>
+<li><b>app/tools/</b>: Contém o script (`sensor.py`) que prepara os dados brutos inseridos na WebApp e executa o modelo de ML.</li>
 
-<li>Contém o arquivo do style.css usado na WebApp.<br>
 
-#### Diretório --> templates<br>
+## Como Executar o Projeto
 
-<li>Contém o arquivo HTML usado na WebApp.<br>
-    
-#### Diretório --> tools<br>
+Para executar a aplicação web, você pode seguir um dos métodos abaixo.
 
-<li>Contém o arquivo python sensor.py que faz a PREPARAÇÃO dados brutos inseridos na WebApp. Também executa o modelo treinado de ML.<br>
+### Método 1: Usando `pip` e `venv` (Recomendado)
 
-#### Arquivo --> app.py<br>
+Este método utiliza o gerenciador de pacotes padrão do Python e um ambiente virtual.
 
-<li>Esse arquivo é um script em Python para a ENTREGA DOS RESULTADOS ao cliente por meio de uma aplicação web usando o framework Flask.<br>
+1.  **Crie e ative um ambiente virtual:**
+    ```bash
+    python -m venv .venv
+    source .venv/bin/activate  # No Windows, use: .\venv\Scripts\activate
+    ```
 
+2.  **Instale as dependências:**
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+3.  **Execute a aplicação com Uvicorn:**
+    ```bash
+    uvicorn app.app:app --host 127.0.0.1 --port 8000 --reload
+    ```
+
+Acesse a aplicação em `http://127.0.0.1:8000`.
+
+### Método 2: Usando `uv`
+
+`uv` é um resolvedor e instalador de pacotes Python extremamente rápido, que também pode executar aplicações.
+
+1.  **Instale o `uv` (se ainda não o tiver):**
+    ```bash
+    pip install uv
+    ```
+
+2.  **Crie e ative um ambiente virtual com `uv`:**
+    ```bash
+    uv venv
+    source .venv/bin/activate  # No Windows, use: .\venv\Scripts\activate
+    ```
+
+3.  **Instale as dependências usando `uv`:**
+    ```bash
+    uv pip install -r requirements.txt
+    ```
+
+4.  **Execute a aplicação com `uv`:**
+    ```bash
+    uv run uvicorn app.app:app --host 127.0.0.1 --port 8000 --reload
+    ```
+
+Acesse a aplicação em `http://127.0.0.1:8000`.
+
+### Método 3: Usando Docker
+
+Este método containeriza a aplicação, garantindo um ambiente de execução consistente.
+
+1.  **Construa a imagem Docker:**
+    Certifique-se de que o Docker Desktop esteja em execução.
+    ```bash
+    docker build -t estudo-de-caso-dadosfera .
+    ```
+
+2.  **Execute o container:**
+    ```bash
+    docker run -p 8000:8000 estudo-de-caso-dadosfera
+    ```
+
+Acesse a aplicação em `http://localhost:8000`.
 
 ## Passo a Passo
 
@@ -88,7 +145,7 @@ DECISÃO: Aplicação da normalização MinMax.<br>
 #### Questões Observadas:
 <li>O sensor 4 possui apenas valores de 50.0, o que levanta o questionamento, o uso dos dados desse sensor é necessário para essa aplicação? Optei por usar, pois é possivel que em momentos futuros esse sensor seja utilizado para identificação de outras classes de problemas não descritos nesse dataset fornecido. Entretanto, caso fique confirmado que realmente é um sensor que retorna apenas esse valor, é possivel dispensa-lo da análise ou até mesmo retira-lo das máquinas cortando custos ao cliente.
     
-<li>A interpolação linear usada não poderia ser utilzida para calcular dois valores nulos sequenciais, como não ocorreu em nenhum dos sensores de existir duas falhas seguidas, optou-se por continuar com a interpolação linear. Entretanto, essa questão pode representar um obstáculo em situações futuras, e pode-se considerar a exclusão dos dados que apresentarem muitas falhas sequenciais ou a mudança do método de interpolação.
+<li>A interpolação linear usada não poderia ser utilizada para calcular dois valores nulos sequenciais, como não ocorreu em nenhum dos sensores de existir duas falhas seguidas, optou-se por continuar com a interpolação linear. Entretanto, essa questão pode representar um obstáculo em situações futuras, e pode-se considerar a exclusão dos dados que apresentarem muitas falhas sequenciais ou a mudança do método de interpolação.
 
 <li>É necessário modificar o tipo de normalização caso seja notado que existam outliers com ordem de grandeza muito maior em relação a média dos dados.
     
@@ -104,7 +161,7 @@ DECISÃO: Aplicação da normalização MinMax.<br>
 
 --> Utilização de métricas como R2, precisão, Revocação, F1 score, avaliação da matriz de confusão, curva ROC
 
---> R2 = 94.27%, UAC = 0.99<br>
+--> UAC = 0.99<br>
 | Classe | Precisão | Revocação | Pontuação F1 | Suporte |
 |--------|----------|-----------|--------------|---------|
 | Classe A | 0.98 | 0.99 | 0.98 | 3038 |
