@@ -2,7 +2,7 @@
 
 ## Apresentação do problema e contextualização
 
-Desenvolva o Pipeline completo de um projeto de Aprendizado de Máquina, desde a Análise e preparação dos dados adquiridos até a disponibilização do algoritmo no GitHub. A aplicação de modelo Machine learning na manutenção preditiva previne falhas em equipamentos industriais ao analisar dados, evitando paradas não planejadas. Foram disponibilizados dados de 5 sensores presentes de uma máquina industrial. O objetivo é classificar com base nos dados fornecidos dos sensores os estados de funcionamentos das máquinas em Classes A, B, C, D e E, gerando um modelo de ML que identifique padrões nos dados dos sensores para realizar as classificações.
+A aplicação de modelo Machine learning na manutenção preditiva previne falhas em equipamentos industriais ao analisar dados, evitando paradas não planejadas. Foram disponibilizados dados de 5 sensores presentes de uma máquina industrial. O objetivo é classificar com base nos dados fornecidos dos sensores os estados de funcionamentos das máquinas em Classes A, B, C, D e E, gerando um modelo de ML que identifique padrões nos dados dos sensores para realizar as classificações.
 
 ### Ressalva
 
