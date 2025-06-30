@@ -161,7 +161,7 @@ DECISÃO: Aplicação da normalização MinMax.<br>
 
 --> Utilização de métricas como R2, precisão, Revocação, F1 score, avaliação da matriz de confusão, curva ROC
 
---> R2 = 94.27%, UAC = 0.99<br>
+--> UAC = 0.99<br>
 | Classe | Precisão | Revocação | Pontuação F1 | Suporte |
 |--------|----------|-----------|--------------|---------|
 | Classe A | 0.98 | 0.99 | 0.98 | 3038 |
