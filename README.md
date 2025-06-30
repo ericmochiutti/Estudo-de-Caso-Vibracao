@@ -198,7 +198,6 @@ DECISÃO: Aplicação da normalização MinMax.<br>
 
 #### Questões Observadas:
 
-<li> Essa WebApp é apenas um protótipo para mostrar uma das formas de entrega ao cliente, ainda é necessário refinamento do código e a realização de testes. É uma forma mais visual de mostrar como é possivel fazer a entrega para o cliente. Entretanto, é possível usar outras soluções desde que sempre estejam alinhadas com o desejado.
-    
+<li> Esse estudo de caso é apenas um protótipo para mostrar uma das formas de entrega ao cliente, ainda é necessário refinamento do código e a realização de testes. É uma forma mais visual de mostrar como é possivel fazer a entrega para o cliente. Entretanto, é possível usar outras soluções desde que sempre estejam alinhadas com o desejado. Além disso, para colocar esse sistema em produção é necessário diversas etapas de MLops para deixar o sistema mais robusto.
 
 
