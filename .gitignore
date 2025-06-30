@@ -1,0 +1,34 @@
+# Bytecode do Python
+__pycache__/
+*.py[cod]
+
+# Ambientes virtuais
+venv/
+.env/
+.venv/
+
+# Arquivos de log
+*.log
+
+# Configs do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos temporários de editores
+*.swp
+*~
+.vscode/
+.idea/
+
+# Arquivos de build
+build/
+dist/
+*.egg-info/
+
+# Dados sensíveis ou específicos do usuário
+.env
+*.key
+*.pem
+
+# Notebooks output
+.ipynb_checkpoints/
