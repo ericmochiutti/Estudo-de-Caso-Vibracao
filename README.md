@@ -29,7 +29,7 @@ Os arquivos do projeto foram divididos nas seguintes pastas e arquivos:
 <li>Contém o arquivo jupyter treinamento_modelo.ipynb em que é realizada a SELEÇÃO DO MODELO de machine learning (rede neural), o TREINAMENTO da rede neural e a AVALIAÇÃO DO MODELO.<br>
 
 #### Diretório --> app<br>
-<li>Contém a aplicação web Flask (`app.py`) que serve o modelo, juntamente com seus componentes.</li>
+<li>Contém a aplicação web (`app.py`) que serve o modelo, juntamente com seus componentes.</li>
 <li><b>app/static/</b>: Contém os arquivos de estilo (style.css) para a WebApp.</li>
 <li><b>app/templates/</b>: Contém o arquivo HTML (index.html) para a WebApp.</li>
 <li><b>app/tools/</b>: Contém o script (`sensor.py`) que prepara os dados brutos inseridos na WebApp e executa o modelo de ML.</li>
